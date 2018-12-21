@@ -12,8 +12,8 @@ res = requests.get(url).json()
 user_id = res["result"][0]["message"]["from"]["id"]
 
 msg = "안녕지선아"
-
 method = 'sendMessage'
+
 msg_url = "https://api.hphk.io/telegram/bot{}/{}?chat_id={}&text={}".format(token,method,user_id,msg)
 
 print(msg_url)
