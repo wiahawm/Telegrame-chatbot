@@ -3,7 +3,8 @@ import os
 from pprint import pprint as pp
 import requests
 import random
-from datetime import date, timedelta
+from datetime import date
+from datetime import datetime, timedelta
 import time
 
 app = Flask(__name__)
@@ -108,11 +109,11 @@ def telegram():
     elif text=="오늘 날짜":
         today=date.today()
         text=today.isoformat()
+        
     # elif text=="언제 집에가":
-    #     now=datetime.now()
-    #     at = time(18,00,00)
-    #     at_time = at.hour, at.minute, at.second
-    #     text = at_time-now
+    #     start = datetime.datetime.now().time()
+        
+    #     text=gohome.strftime('%Y-%m-%d %H:%M:%S')
         
         
     
